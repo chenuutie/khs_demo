@@ -1,4 +1,19 @@
 nav{
     display: flex;
     flex-direction: row;
+    a{
+        color:#fff;
+    }
+
+    .nav_right{
+        display: flex;
+        flex-direction: row;
+        
+        .h_facebook{
+            background-image:url(../img/header_FB4.svg);
+            background-image:#fff;
+            background-repeat: no-repeat;
+        }
+    }
+  
 }
