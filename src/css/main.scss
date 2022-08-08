@@ -43,5 +43,46 @@ header{
         top:0; 
         z-index: -2;
     }
+
+    .bottom_area{
+        h1{
+            letter-spacing: 5px;
+            font-size: x-large;
+            font-weight: 400;
+            color:white;
+            position: absolute;
+            bottom:250px;
+            margin-left: 30px;
+        }
+
+        .bottom{
+            display: flex;
+            position: absolute;
+            left: 0px;
+            bottom: 0px;
+            width:100%;
+            height:230px;
+            background-image: url("../img/index_bottom.svg");
+            background-position: 0%;
+            background-repeat: no-repeat;
+            background-size:contain;
+        
+            
+            p{
+                align-self: center;
+                margin-left: 30px;
+                color:white;
+                font-size:16px;
+                font-weight:500;
+                line-height: 25px;
+                
+            }
+    
+        } 
+
+    }
+
+    
+   
 }
   
