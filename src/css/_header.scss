@@ -1,0 +1,149 @@
+$color1:#fff;
+
+
+header{
+    width:100%;
+    height:100vh;
+    background-image: url(../img/bg/bg-32.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover; /*使圖片滿版 */
+    position:relative;
+    z-index: 1;
+    
+    /*遮罩  before遮上半部 after整個版面*/
+    &::before{
+        content: "";
+        background: linear-gradient(0deg,rgba(0,0,0,0) 0%, black 100%);
+        width: 100%;
+        height: 50%;   
+        display: block; /*把行內元素變快捷*/
+        opacity: .5;
+        position:absolute;
+        top:0;
+        left:0;
+        z-index: -1;
+        opacity: .55;
+    }
+
+    &::after{
+        content: "";
+        background: rgba(0,0,0,.3);
+        width: 100%;
+        height: 100%;   
+        display: block; /*把行內元素變快捷*/
+        position:absolute;
+        left: 0;
+        top:0; 
+        z-index: -2;
+    }
+
+    .bottom_area{
+        color:$color1;
+        width:100%;
+        height:240px;
+        max-width: 800px;
+        position: absolute;
+        padding-left: 20px;
+        left: 0;
+        bottom: 0;
+        margin: 0;
+        background-image: url("../img/index_bottom.svg");
+        background-position: left-bottom;
+        background-repeat: no-repeat;
+        background-size:cover;//這樣縮小物件也不會跟著視窗縮放
+    
+       
+        h1{
+            letter-spacing: .06em;
+            font-size: 39px;
+            font-weight: 400;
+            color:$color1;
+            position: absolute;
+            top: -31%;//%做RWD
+            text-shadow: 5px 5px 11px rgba(0, 0, 0, 0.75);
+            margin-left: 30px;
+
+            button.youtube_play {
+                background: none;
+                border: 0;
+                display: inline-block;
+                width: 42px;
+                height: 42px;
+                line-height: 41px;
+                margin-left: 13px;
+                position: relative;
+                top: 1px;
+                text-indent: -9999px;
+                background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='44' height='44' viewBox='0 0 44 44'%3E%3Cpath fill='%23FFF' d='M22 3c10.477 0 19 8.524 19 19 0 10.477-8.523 19-19 19S3 32.477 3 22C3 11.524 11.523 3 22 3m0-2C10.403 1 1 10.403 1 22c0 11.598 9.403 21 21 21s21-9.402 21-21c0-11.597-9.403-21-21-21z'/%3E%3Cpath fill='%23FFF' d='M29.987 22.246l-12.18 7.27a.285.285 0 0 1-.432-.245V14.73a.29.29 0 0 1 .143-.25.292.292 0 0 1 .289.003l12.18 7.272a.283.283 0 0 1 .139.244.288.288 0 0 1-.139.247z'/%3E%3C/svg%3E");
+                vertical-align: bottom;
+                background-size: contain;
+              }
+        
+        }
+            
+            p{
+                // align-self: center;
+                top:15%;
+                width:42%;
+                position:absolute;
+                margin-left: 30px;
+                font-size:16px;
+                line-height: 27px;
+                letter-spacing: .027rem;  
+            }
+            
+            a{
+                margin-top:10%;
+                font-size:16px;
+                color:$color1;
+                display:block;
+                text-decoration: none;
+                text-align:center;
+                border:1px solid $color1;
+                border-radius: 5px;
+                background-color: transparent;
+                height:36px;
+                line-height:36px;
+                width:108px;
+                position: absolute;
+                bottom:24px;
+                left:6%;
+
+                &:hover {
+                    background-color: #ffffff;
+                    color: #D01A48;
+                  }
+            
+            }
+    
+        } 
+
+    
+
+    .go_down {
+        position: absolute;
+        left: 50%;
+        bottom: 18px;
+        z-index: 5;
+        width: 136px;
+        height: 47px;
+        margin-left: -65px;
+        text-indent: -9999px; //把字隱藏
+        background-size: cover;
+        background-image: url("data:image/svg+xml,%3Csvg version='1.1'   xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'  x='0px' y='0px' viewBox='0 0 136 47' style='enable-background:new 0 0 136 47;'  xml:space='preserve'%3E%3Cstyle type='text/css'%3E .st0%7Bfill:none;stroke: %23FFFFFF;stroke-width:2;stroke-miterlimit:10;%7D%0A%3C/style%3E%3Cg%3E%3Cimage  style='overflow:visible;opacity:0.25;' width='136' height='47'  xlink:href='3EF62892.png' %3E%3C/image%3E%3Cg%3E%3Cpath class='st0'  d='M13,13l42.4,13.1c5.3,1.6,13.9,1.6,19.1,0L117,13'/%3E%3C/g%3E%3C/g%3E%3C/svg %3E");
+      }
+
+}
+
+
+
+
+// @media (max-width:992px) {
+//     .bottom_area{
+//         .bottom{
+            
+
+//         }
+//     }
+// }

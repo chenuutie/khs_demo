@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;700&display=swap');
+@import"_variables"; //變數編譯
+@import"_normalize";
+
+
+/* 避 免 跑 版 */
+html {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+  *, *:before, *:after {
+    -webkit-box-sizing: inherit;
+    -moz-box-sizing: inherit;
+    box-sizing: inherit;
+  }
+
+  .container {
+    width:100%;
+    max-width:1280px;
+    margin:0 auto;
+    padding:0 20px;
+}  //共用容器;避免螢幕太大時跑版;max-w根據設計師設定
+

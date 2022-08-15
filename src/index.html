@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html lang="zh-Hant-TW">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>KHS</title>
-
+    <link rel="stylesheet" href="css/global.scss"> <!--共用放global,拆開放檔案較小-->
     <link rel="stylesheet" href="css/main.css">
 </head>
 
@@ -14,22 +15,55 @@
         @@include('include/nav.html')
 
         <div class="bottom_area">
-            <div class="bottom">
-                <h1>全心灌溉熱愛音樂的幼苗</h1>
-                <p>功學社取自「貢獻」、「學校」、「社會」，<br>
-                    我們希望用優質的樂器與熱誠的音樂教育，<br>
-                    將藝術的種子散布在台灣各處，同時走向國際名揚台灣精神。</p>
-                <p>關於我們</p>
             
-            </div>
+                <h1>全心灌溉熱愛音樂的幼苗
+                    <button id="youtube_button" class="youtube_play"></button>
+                </h1>
+                <p>功學社取自「貢獻」、「學校」、「社會」，<br>
+                    我們希望用優質的樂器與熱誠的音樂教育，
+                    將藝術的種子散布在台灣各處，同時走向國際名揚台灣精神。</p>
+                <a href="#">關於我們</a>
+            
         </div>
+        <a href="#" id="go_down" class="go_down">down</a>
 
-        
-        
     </header>
 
-    
-    
+    <div class="service">
+        <h2 class="service_header">
+            <div class="container">
+                <span>服務項目</span>
+            </div>
+        </h2>
+        <div class="service_row_parent">
+            <div class="service_row container">
+                @@include("include/service_col.html")
+                @@include("include/service_col.html")
+            </div>
+        </div>
+    </div>
+
+    <div class="news">
+        <div class="container">
+            <h2><span>最新消息</span></h2>
+            <div class="news_row">
+                @@include("include/news_col.html")
+                @@include("include/news_col.html")
+                @@include("include/news_col.html")
+                @@include("include/news_col.html")
+                @@include("include/news_col.html")
+                @@include("include/news_col.html")
+            </div>
+            <div class="news_block">
+
+            </div>
+        </div>
+    </div>
+
+
+
+
+
 </body>
 
 </html>

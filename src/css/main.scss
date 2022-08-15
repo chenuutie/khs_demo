@@ -1,88 +1,10 @@
-
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;700&display=swap');
 @import"_variables"; //變數編譯
-@import"_normalize";
 @import"_reset";
-@import"_global";
 
 @import"_nav";
-  
-header{
-    width:100%;
-    height:100vh;
-    background-image: url(../img/bg/bg-32.png);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover; /*使圖片滿版 */
-    position:relative;
-    z-index: 1;
-    
-    /*遮罩  before遮上半部 after整個版面*/
-    &::before{
-        content: "";
-        background: linear-gradient(0deg,rgba(0,0,0,0) 0%, black 100%);
-        width: 100%;
-        height: 50%;   
-        display: block; /*把行內元素變快捷*/
-        opacity: .5;
-        position:absolute;
-        top:0;
-        left:0;
-        z-index: -1;
-        opacity: .55;
-    }
+@import"_header";
 
-    &::after{
-        content: "";
-        background: rgba(0,0,0,.3);
-        width: 100%;
-        height: 100%;   
-        display: block; /*把行內元素變快捷*/
-        position:absolute;
-        left: 0;
-        top:0; 
-        z-index: -2;
-    }
+@import"_service";
+@import"_news";
 
-    .bottom_area{
-        h1{
-            letter-spacing: 5px;
-            font-size: x-large;
-            font-weight: 400;
-            color:white;
-            position: absolute;
-            bottom:250px;
-            margin-left: 30px;
-        }
 
-        .bottom{
-            display: flex;
-            position: absolute;
-            left: 0px;
-            bottom: 0px;
-            width:100%;
-            height:230px;
-            background-image: url("../img/index_bottom.svg");
-            background-position: 0%;
-            background-repeat: no-repeat;
-            background-size:contain;
-        
-            
-            p{
-                align-self: center;
-                margin-left: 30px;
-                color:white;
-                font-size:16px;
-                font-weight:500;
-                line-height: 25px;
-                
-            }
-    
-        } 
-
-    }
-
-    
-   
-}
-  
