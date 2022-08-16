@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>KHS</title>
-    <link rel="stylesheet" href="css/global.scss"> <!--共用放global,拆開放檔案較小-->
+    <link rel="stylesheet" href="css/global.css"> <!--共用放global,拆開放檔案較小-->
     <link rel="stylesheet" href="css/main.css">
 </head>
 
@@ -37,8 +37,12 @@
         </h2>
         <div class="service_row_parent">
             <div class="service_row container">
-                @@include("include/service_col.html")
-                @@include("include/service_col.html")
+                @@include("include/service_col.html",{
+                    "bg_class" : "bg1"
+                })
+                @@include("include/service_col.html",{
+                    "bg_class" : "bg2"
+                })
             </div>
         </div>
     </div>
@@ -46,13 +50,18 @@
     <div class="news">
         <div class="container">
             <h2><span>最新消息</span></h2>
-            <div class="news_row">
-                @@include("include/news_col.html")
-                @@include("include/news_col.html")
-                @@include("include/news_col.html")
-                @@include("include/news_col.html")
-                @@include("include/news_col.html")
-                @@include("include/news_col.html")
+            <div class="news_row"> <!----- 利用迴圈做 ----->
+                @@for (var i=0 ; i<9 ; i++){
+                    @@include("include/news_col.html",{
+                        "img" : "https://picsum.photos/800/600/?random=`+i+`",
+                        "name" : "彩繪你的鋼琴!音樂夢想就不遠囉!1"
+                    })
+
+                }
+                
+                
+                
+
             </div>
             <div class="news_block">
 

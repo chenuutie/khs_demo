@@ -8,9 +8,6 @@
     }
 }
 
-
-
-
 .service_col {
     position: relative;
     border-radius: 20px;
@@ -31,11 +28,18 @@
     }
 
     .service_text {
-        background-color: currentColor;
+        // background-color: blue;
         padding: 16px;
         padding-top: 12px;
         position: relative;
         overflow: hidden;
+
+        &.bg1{
+            background-color: #cc9650;
+        }
+        &.bg2{
+            background-color:#73bf00;
+        }
 
         .service_bg {
             width: 150px;
@@ -44,6 +48,7 @@
             margin-left: 12px;
             background-repeat: no-repeat;
         }
+        
 
         .service_parent {
             margin-left: 182px;
